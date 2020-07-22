@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 3.2.1 (Python 3.8.3 on darwin)" generated="20200722 20:25:05.650" rpa="false">
+<robot generator="Robot 3.2.1 (Python 3.8.3 on darwin)" generated="20200723 01:14:19.384" rpa="false">
 <suite id="s1" name="TestSuite" source="/Users/bazhenakashchuk/PycharmProjects/wiki/tests/TestSuite.robot">
-<test id="s1-t1" name="User open the article and change languages of the article">
+<test id="s1-t1" name="User add article to save">
 <kw name="Open And Load Application" library="Keywords">
 <kw name="Open Application" library="AppiumLibrary">
 <doc>Opens a new application to given Appium server.
@@ -18,9 +18,9 @@ Please check https://github.com/appium/appium/blob/master/docs/en/writing-runnin
 <arg>deviceName=iPhone 8</arg>
 <arg>app=/Users/bazhenakashchuk/Desktop/Wikipedia.app</arg>
 </arguments>
-<status status="PASS" starttime="20200722 20:25:06.277" endtime="20200722 20:25:17.453"></status>
+<status status="PASS" starttime="20200723 01:14:19.997" endtime="20200723 01:14:31.021"></status>
 </kw>
-<status status="PASS" starttime="20200722 20:25:06.277" endtime="20200722 20:25:17.453"></status>
+<status status="PASS" starttime="20200723 01:14:19.996" endtime="20200723 01:14:31.021"></status>
 </kw>
 <kw name="Skip Settings" library="Keywords">
 <kw name="Wait Until Page Contains Element" library="AppiumLibrary">
@@ -28,17 +28,17 @@ Please check https://github.com/appium/appium/blob/master/docs/en/writing-runnin
 <arguments>
 <arg>accessibility_id=Skip</arg>
 </arguments>
-<status status="PASS" starttime="20200722 20:25:17.454" endtime="20200722 20:25:17.693"></status>
+<status status="PASS" starttime="20200723 01:14:31.022" endtime="20200723 01:14:31.276"></status>
 </kw>
 <kw name="Click Element" library="AppiumLibrary">
 <doc>Click element identified by `locator`.</doc>
 <arguments>
 <arg>accessibility_id=Skip</arg>
 </arguments>
-<msg timestamp="20200722 20:25:17.695" level="INFO">Clicking element 'accessibility_id=Skip'.</msg>
-<status status="PASS" starttime="20200722 20:25:17.693" endtime="20200722 20:25:18.508"></status>
+<msg timestamp="20200723 01:14:31.278" level="INFO">Clicking element 'accessibility_id=Skip'.</msg>
+<status status="PASS" starttime="20200723 01:14:31.276" endtime="20200723 01:14:32.097"></status>
 </kw>
-<status status="PASS" starttime="20200722 20:25:17.454" endtime="20200722 20:25:18.509"></status>
+<status status="PASS" starttime="20200723 01:14:31.021" endtime="20200723 01:14:32.097"></status>
 </kw>
 <kw name="Search The Article" library="Keywords">
 <kw name="Wait Until Page Contains Element" library="AppiumLibrary">
@@ -46,33 +46,33 @@ Please check https://github.com/appium/appium/blob/master/docs/en/writing-runnin
 <arguments>
 <arg>accessibility_id=Search Wikipedia</arg>
 </arguments>
-<status status="PASS" starttime="20200722 20:25:18.510" endtime="20200722 20:25:19.776"></status>
+<status status="PASS" starttime="20200723 01:14:32.098" endtime="20200723 01:14:33.350"></status>
 </kw>
 <kw name="Click Element" library="AppiumLibrary">
 <doc>Click element identified by `locator`.</doc>
 <arguments>
 <arg>accessibility_id=Search Wikipedia</arg>
 </arguments>
-<msg timestamp="20200722 20:25:19.779" level="INFO">Clicking element 'accessibility_id=Search Wikipedia'.</msg>
-<status status="PASS" starttime="20200722 20:25:19.776" endtime="20200722 20:25:21.364"></status>
+<msg timestamp="20200723 01:14:33.354" level="INFO">Clicking element 'accessibility_id=Search Wikipedia'.</msg>
+<status status="PASS" starttime="20200723 01:14:33.351" endtime="20200723 01:14:34.617"></status>
 </kw>
 <kw name="Input Text" library="AppiumLibrary">
 <doc>Types the given `text` into text field identified by `locator`.</doc>
 <arguments>
 <arg>accessibility_id=Search Wikipedia</arg>
-<arg>${Article}</arg>
+<arg>${article}</arg>
 </arguments>
-<msg timestamp="20200722 20:25:21.367" level="INFO">Typing text 'Peris Hilton' into text field 'accessibility_id=Search Wikipedia'</msg>
-<status status="PASS" starttime="20200722 20:25:21.365" endtime="20200722 20:25:23.347"></status>
+<msg timestamp="20200723 01:14:34.619" level="INFO">Typing text 'Peris Hilton' into text field 'accessibility_id=Search Wikipedia'</msg>
+<status status="PASS" starttime="20200723 01:14:34.617" endtime="20200723 01:14:36.413"></status>
 </kw>
 <kw name="Tap" library="AppiumLibrary">
 <doc>Tap element identified by ``locator``.</doc>
 <arguments>
 <arg>Search</arg>
 </arguments>
-<status status="PASS" starttime="20200722 20:25:23.348" endtime="20200722 20:25:24.097"></status>
+<status status="PASS" starttime="20200723 01:14:36.413" endtime="20200723 01:14:37.350"></status>
 </kw>
-<status status="PASS" starttime="20200722 20:25:18.509" endtime="20200722 20:25:24.098"></status>
+<status status="PASS" starttime="20200723 01:14:32.098" endtime="20200723 01:14:37.350"></status>
 </kw>
 <kw name="Open The Article" library="Keywords">
 <kw name="Wait Until Page Contains Element" library="AppiumLibrary">
@@ -80,84 +80,229 @@ Please check https://github.com/appium/appium/blob/master/docs/en/writing-runnin
 <arguments>
 <arg>accessibility_id=Paris Hilton</arg>
 </arguments>
-<status status="PASS" starttime="20200722 20:25:24.099" endtime="20200722 20:25:24.865"></status>
+<status status="PASS" starttime="20200723 01:14:37.351" endtime="20200723 01:14:38.033"></status>
 </kw>
 <kw name="Click Element" library="AppiumLibrary">
 <doc>Click element identified by `locator`.</doc>
 <arguments>
 <arg>accessibility_id=Paris Hilton</arg>
 </arguments>
-<msg timestamp="20200722 20:25:24.868" level="INFO">Clicking element 'accessibility_id=Paris Hilton'.</msg>
-<status status="PASS" starttime="20200722 20:25:24.866" endtime="20200722 20:25:26.415"></status>
+<msg timestamp="20200723 01:14:38.036" level="INFO">Clicking element 'accessibility_id=Paris Hilton'.</msg>
+<status status="PASS" starttime="20200723 01:14:38.033" endtime="20200723 01:14:39.397"></status>
 </kw>
-<status status="PASS" starttime="20200722 20:25:24.098" endtime="20200722 20:25:26.415"></status>
+<status status="PASS" starttime="20200723 01:14:37.351" endtime="20200723 01:14:39.398"></status>
 </kw>
-<kw name="Change Language" library="Keywords">
-<doc>ENG to RUS</doc>
+<kw name="Save Article" library="Keywords">
 <kw name="Wait Until Page Contains Element" library="AppiumLibrary">
 <doc>Waits until element specified with `locator` appears on current page.</doc>
 <arguments>
-<arg>accessibility_id=Change language</arg>
+<arg>accessibility_id=Save for later</arg>
 </arguments>
-<status status="PASS" starttime="20200722 20:25:26.416" endtime="20200722 20:25:26.937"></status>
+<status status="PASS" starttime="20200723 01:14:39.400" endtime="20200723 01:14:39.967"></status>
 </kw>
 <kw name="Click Element" library="AppiumLibrary">
 <doc>Click element identified by `locator`.</doc>
 <arguments>
-<arg>accessibility_id=Change language</arg>
+<arg>accessibility_id=Save for later</arg>
 </arguments>
-<msg timestamp="20200722 20:25:26.940" level="INFO">Clicking element 'accessibility_id=Change language'.</msg>
-<status status="PASS" starttime="20200722 20:25:26.937" endtime="20200722 20:25:28.078"></status>
+<msg timestamp="20200723 01:14:39.970" level="INFO">Clicking element 'accessibility_id=Save for later'.</msg>
+<status status="PASS" starttime="20200723 01:14:39.967" endtime="20200723 01:16:04.157"></status>
 </kw>
 <kw name="Wait Until Page Contains Element" library="AppiumLibrary">
 <doc>Waits until element specified with `locator` appears on current page.</doc>
 <arguments>
-<arg>accessibility_id=Русский</arg>
+<arg>accessibility_id=Back</arg>
 </arguments>
-<status status="PASS" starttime="20200722 20:25:28.079" endtime="20200722 20:25:43.641"></status>
+<status status="PASS" starttime="20200723 01:16:04.157" endtime="20200723 01:16:13.950"></status>
 </kw>
 <kw name="Click Element" library="AppiumLibrary">
 <doc>Click element identified by `locator`.</doc>
 <arguments>
-<arg>accessibility_id=Русский</arg>
+<arg>accessibility_id=Back</arg>
 </arguments>
-<msg timestamp="20200722 20:25:43.643" level="INFO">Clicking element 'accessibility_id=Русский'.</msg>
-<status status="PASS" starttime="20200722 20:25:43.641" endtime="20200722 20:26:18.141"></status>
+<msg timestamp="20200723 01:16:13.953" level="INFO">Clicking element 'accessibility_id=Back'.</msg>
+<status status="PASS" starttime="20200723 01:16:13.951" endtime="20200723 01:16:44.536"></status>
 </kw>
-<kw name="Set Appium Timeout" library="AppiumLibrary">
-<doc>Sets the timeout in seconds used by various keywords.</doc>
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
 <arguments>
-<arg>10</arg>
+<arg>accessibility_id=Cancel</arg>
 </arguments>
-<status status="PASS" starttime="20200722 20:26:18.142" endtime="20200722 20:26:18.142"></status>
+<status status="PASS" starttime="20200723 01:16:44.536" endtime="20200723 01:16:45.497"></status>
 </kw>
-<kw name="Page Should Contain Element" library="AppiumLibrary">
-<doc>Verifies that current page contains `locator` element.</doc>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
 <arguments>
-<arg>accessibility_id=Хилтон, Пэрис</arg>
+<arg>accessibility_id=Cancel</arg>
 </arguments>
-<msg timestamp="20200722 20:26:25.956" level="INFO">Current page contains element 'accessibility_id=Хилтон, Пэрис'.</msg>
-<status status="PASS" starttime="20200722 20:26:18.142" endtime="20200722 20:26:25.956"></status>
+<msg timestamp="20200723 01:16:45.500" level="INFO">Clicking element 'accessibility_id=Cancel'.</msg>
+<status status="PASS" starttime="20200723 01:16:45.498" endtime="20200723 01:16:47.104"></status>
 </kw>
-<status status="PASS" starttime="20200722 20:25:26.416" endtime="20200722 20:26:25.956"></status>
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>accessibility_id=Saved</arg>
+</arguments>
+<status status="PASS" starttime="20200723 01:16:47.105" endtime="20200723 01:16:47.784"></status>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>accessibility_id=Saved</arg>
+</arguments>
+<msg timestamp="20200723 01:16:47.785" level="INFO">Clicking element 'accessibility_id=Saved'.</msg>
+<status status="PASS" starttime="20200723 01:16:47.784" endtime="20200723 01:16:48.741"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="AppiumLibrary">
+<doc>Waits until `text` appears on current page.</doc>
+<arguments>
+<arg>Paris Hilton</arg>
+</arguments>
+<status status="PASS" starttime="20200723 01:16:48.742" endtime="20200723 01:16:50.124"></status>
+</kw>
+<status status="PASS" starttime="20200723 01:14:39.399" endtime="20200723 01:16:50.125"></status>
 </kw>
 <kw name="Close Application" library="AppiumLibrary">
 <doc>Closes the current application and also close webdriver session.</doc>
-<status status="PASS" starttime="20200722 20:26:25.957" endtime="20200722 20:26:27.016"></status>
+<status status="PASS" starttime="20200723 01:16:50.125" endtime="20200723 01:16:51.164"></status>
 </kw>
-<status status="PASS" starttime="20200722 20:25:06.276" endtime="20200722 20:26:27.017" critical="yes"></status>
+<status status="PASS" starttime="20200723 01:14:19.995" endtime="20200723 01:16:51.164" critical="yes"></status>
 </test>
-<status status="PASS" starttime="20200722 20:25:05.655" endtime="20200722 20:26:27.019"></status>
+<test id="s1-t2" name="User explore the location">
+<kw name="Open And Load Application" library="Keywords">
+<kw name="Open Application" library="AppiumLibrary">
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/server-args.md
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |</doc>
+<arguments>
+<arg>http://localhost:4723/wd/hub</arg>
+<arg>alias=myApp</arg>
+<arg>platformName=iOS</arg>
+<arg>platformVersion=13.6</arg>
+<arg>deviceName=iPhone 8</arg>
+<arg>app=/Users/bazhenakashchuk/Desktop/Wikipedia.app</arg>
+</arguments>
+<status status="PASS" starttime="20200723 01:16:51.167" endtime="20200723 01:17:03.142"></status>
+</kw>
+<status status="PASS" starttime="20200723 01:16:51.166" endtime="20200723 01:17:03.142"></status>
+</kw>
+<kw name="Skip Settings" library="Keywords">
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>accessibility_id=Skip</arg>
+</arguments>
+<status status="PASS" starttime="20200723 01:17:03.143" endtime="20200723 01:17:03.397"></status>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>accessibility_id=Skip</arg>
+</arguments>
+<msg timestamp="20200723 01:17:03.399" level="INFO">Clicking element 'accessibility_id=Skip'.</msg>
+<status status="PASS" starttime="20200723 01:17:03.397" endtime="20200723 01:17:04.231"></status>
+</kw>
+<status status="PASS" starttime="20200723 01:17:03.142" endtime="20200723 01:17:04.232"></status>
+</kw>
+<kw name="Search The Location" library="Keywords">
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>accessibility_id=Places</arg>
+</arguments>
+<status status="PASS" starttime="20200723 01:17:04.233" endtime="20200723 01:17:05.468"></status>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>accessibility_id=Places</arg>
+</arguments>
+<msg timestamp="20200723 01:17:05.472" level="INFO">Clicking element 'accessibility_id=Places'.</msg>
+<status status="PASS" starttime="20200723 01:17:05.469" endtime="20200723 01:17:07.090"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>accessibility_id=Enable location</arg>
+</arguments>
+<status status="PASS" starttime="20200723 01:17:07.090" endtime="20200723 01:17:09.102"></status>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>accessibility_id=Enable location</arg>
+</arguments>
+<msg timestamp="20200723 01:17:09.109" level="INFO">Clicking element 'accessibility_id=Enable location'.</msg>
+<status status="PASS" starttime="20200723 01:17:09.103" endtime="20200723 01:17:10.330"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>accessibility_id=Allow While Using App</arg>
+</arguments>
+<status status="PASS" starttime="20200723 01:17:10.331" endtime="20200723 01:17:11.551"></status>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>accessibility_id=Allow While Using App</arg>
+</arguments>
+<msg timestamp="20200723 01:17:11.553" level="INFO">Clicking element 'accessibility_id=Allow While Using App'.</msg>
+<status status="PASS" starttime="20200723 01:17:11.552" endtime="20200723 01:17:12.978"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>accessibility_id=Search Places</arg>
+</arguments>
+<status status="PASS" starttime="20200723 01:17:12.978" endtime="20200723 01:17:16.184"></status>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>accessibility_id=Search Places</arg>
+</arguments>
+<msg timestamp="20200723 01:17:16.189" level="INFO">Clicking element 'accessibility_id=Search Places'.</msg>
+<status status="PASS" starttime="20200723 01:17:16.184" endtime="20200723 01:17:19.448"></status>
+</kw>
+<kw name="Input Text" library="AppiumLibrary">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>accessibility_id=Search Places</arg>
+<arg>${location}</arg>
+</arguments>
+<msg timestamp="20200723 01:17:19.451" level="INFO">Typing text 'Minsk,Belarus' into text field 'accessibility_id=Search Places'</msg>
+<status status="PASS" starttime="20200723 01:17:19.448" endtime="20200723 01:17:21.269"></status>
+</kw>
+<kw name="Tap" library="AppiumLibrary">
+<doc>Tap element identified by ``locator``.</doc>
+<arguments>
+<arg>Search</arg>
+</arguments>
+<status status="PASS" starttime="20200723 01:17:21.269" endtime="20200723 01:17:22.197"></status>
+</kw>
+<status status="PASS" starttime="20200723 01:17:04.232" endtime="20200723 01:17:22.197"></status>
+</kw>
+<kw name="Close Application" library="AppiumLibrary">
+<doc>Closes the current application and also close webdriver session.</doc>
+<status status="PASS" starttime="20200723 01:17:22.197" endtime="20200723 01:17:23.346"></status>
+</kw>
+<status status="PASS" starttime="20200723 01:16:51.165" endtime="20200723 01:17:23.347" critical="yes"></status>
+</test>
+<status status="PASS" starttime="20200723 01:14:19.387" endtime="20200723 01:17:23.348"></status>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="0">Critical Tests</stat>
-<stat pass="1" fail="0">All Tests</stat>
+<stat pass="2" fail="0">Critical Tests</stat>
+<stat pass="2" fail="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" id="s1" name="TestSuite">TestSuite</stat>
+<stat pass="2" fail="0" id="s1" name="TestSuite">TestSuite</stat>
 </suite>
 </statistics>
 <errors>

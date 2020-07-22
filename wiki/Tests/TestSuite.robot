@@ -59,7 +59,7 @@ User forgot password
 User clear cached data
     Open And Load Application
     Skip Settings
-    Clear Data cached data
+    Clear Data Сached data
     AppiumLibrary.Close Application
 User open the article and change front size of the article
     Open And Load Application
@@ -75,6 +75,23 @@ User open the article and change languages of the article
     Open The Article
     Change Language
     AppiumLibrary.Close Application
+User add article to save
+    Open And Load Application
+    Skip Settings
+    Search The Article
+    Open The Article
+    Save Article
+    AppiumLibrary.Close Application
+User verify the location
+    Open And Load Application
+    Skip Settings
+    Search The Location
+    AppiumLibrary.Close Application
+
+
+
+
+
 
 
 

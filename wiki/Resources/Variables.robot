@@ -8,3 +8,4 @@ ${password}  change13
 &{incorrectPasswordIncorrectUsername}  UserName=cat  UserPassword=12345  ErrorMessage=Incorrect username or password entered. Please try again.
 ${errorMessageInvalidCapture}  invalid CAPTURE
 ${nameForCreation}  testname89090023
+${location}  Minsk,Belarus

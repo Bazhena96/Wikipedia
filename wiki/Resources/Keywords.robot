@@ -111,7 +111,7 @@ Forgot Password
     AppiumLibrary.Input Text  accessibility_id=enter username  ${name}
     AppiumLibrary.Wait Until Page Contains Element  accessibility_id=Reset
     AppiumLibrary.Click Element  accessibility_id=Reset
-Clear Data cached data
+Clear Data Сached data
     AppiumLibrary.Wait Until Page Contains Element  accessibility_id=Settings
     AppiumLibrary.Click Element   accessibility_id=Settings
     AppiumLibrary.Wait Until Page Contains Element  accessibility_id=Clear cached data
@@ -136,6 +136,50 @@ Change Language
     AppiumLibrary.Click Element   accessibility_id=Русский
     AppiumLibrary.Set Appium Timeout  10
     Page Should Contain Element  accessibility_id=Хилтон, Пэрис
+Save Article
+    AppiumLibrary.Wait Until Page Contains Element  accessibility_id=Save for later
+    AppiumLibrary.Click Element   accessibility_id=Save for later
+    AppiumLibrary.Wait Until Page Contains Element  accessibility_id=Back
+    AppiumLibrary.Click Element   accessibility_id=Back
+    AppiumLibrary.Wait Until Page Contains Element  accessibility_id=Cancel
+    AppiumLibrary.Click Element   accessibility_id=Cancel
+    AppiumLibrary.Wait Until Page Contains Element  accessibility_id=Saved
+    AppiumLibrary.Click Element   accessibility_id=Saved
+    AppiumLibrary.Wait Until Page Contains   Paris Hilton
+Search The Location
+    AppiumLibrary.Wait Until Page Contains Element  accessibility_id=Places
+    AppiumLibrary.Click Element   accessibility_id=Places
+    AppiumLibrary.Wait Until Page Contains Element  accessibility_id=Enable location
+    AppiumLibrary.Click Element   accessibility_id=Enable location
+    AppiumLibrary.Wait Until Page Contains Element  accessibility_id=Allow While Using App
+    AppiumLibrary.Click Element   accessibility_id=Allow While Using App
+    AppiumLibrary.Wait Until Page Contains Element  accessibility_id=Search Places
+    AppiumLibrary.Click Element   accessibility_id=Search Places
+    AppiumLibrary.Input Text   accessibility_id=Search Places  ${location}
+    AppiumLibrary.Tap  Search
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
