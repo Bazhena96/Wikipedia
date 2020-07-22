@@ -10,7 +10,7 @@ Skip Settings
 Search The Article
     AppiumLibrary.Wait Until Page Contains Element  accessibility_id=Search Wikipedia
     AppiumLibrary.Click Element  accessibility_id=Search Wikipedia
-    AppiumLibrary.Input Text   accessibility_id=Search Wikipedia  ${Article}
+    AppiumLibrary.Input Text   accessibility_id=Search Wikipedia  ${article}
     AppiumLibrary.Tap  Search
 Change Settings
     AppiumLibrary.Wait Until Page Contains Element  xpath=(//XCUIElementTypeButton[@name="overflow"])[1]
@@ -29,10 +29,10 @@ Log In
     AppiumLibrary.Click Element  accessibility_id=Log in
     AppiumLibrary.Wait Until Page Contains Element  accessibility_id=enter username
     AppiumLibrary.Click Element   accessibility_id=enter username
-    AppiumLibrary.Input Text  accessibility_id= enter username   ${NAME}
+    AppiumLibrary.Input Text  accessibility_id= enter username   ${name}
     AppiumLibrary.Wait Until Page Contains Element  accessibility_id=enter password
     AppiumLibrary.Click Element  accessibility_id=enter password
-    AppiumLibrary.Input Text  accessibility_id=enter password   ${PASSWORD}
+    AppiumLibrary.Input Text  accessibility_id=enter password   ${password}
     AppiumLibrary.Wait Until Page Contains Element  xpath=//XCUIElementTypeButton[@name="Log in"]
     AppiumLibrary.Click Element  xpath=//XCUIElementTypeButton[@name="Log in"]
 Log Out
@@ -58,47 +58,47 @@ Create Account
     AppiumLibrary.Click Element   accessibility_id=Don't have an account? Join Wikipedia.
     AppiumLibrary.Wait Until Page Contains Element  accessibility_id=enter username
     AppiumLibrary.Click Element   accessibility_id=enter username
-    AppiumLibrary.Input Text  accessibility_id=enter username  ${NameForCreation}
+    AppiumLibrary.Input Text  accessibility_id=enter username  ${nameForCreation}
     AppiumLibrary.Wait Until Page Contains Element  accessibility_id=enter password
     AppiumLibrary.Click Element   accessibility_id=enter password
-    AppiumLibrary.Input Text  accessibility_id= enter password  ${PASSWORD}
+    AppiumLibrary.Input Text  accessibility_id= enter password  ${password}
     AppiumLibrary.Wait Until Page Contains Element  accessibility_id=re-enter password
     AppiumLibrary.Click Element   accessibility_id=re-enter password
-    AppiumLibrary.Input Text  accessibility_id=re-enter password  ${PASSWORD}
+    AppiumLibrary.Input Text  accessibility_id=re-enter password  ${password}
     AppiumLibrary.Wait Until Page Contains Element  accessibility_id=enter email
     AppiumLibrary.Click Element   accessibility_id=enter email
-    AppiumLibrary.Input Text  accessibility_id=enter email  ${EMAIL}
+    AppiumLibrary.Input Text  accessibility_id=enter email  ${email}
     AppiumLibrary.Click Element   accessibility_id=CAPTCHA text
     AppiumLibrary.Input Text  accessibility_id=CAPTCHA text    ROW
     AppiumLibrary.Wait Until Page Contains Element  accessibility_id=Create your account
     AppiumLibrary.Click Element   accessibility_id=Create your account
 
 Verify Error Message, When User Created Account With Invalid Capture
-    Wait Until Page Countains  ${ErrorMessage_InvalidCapture}
+    Wait Until Page Countains  ${errorMessageInvalidCapture}
 Log Into Account And See A Correct Error Message
-    [Arguments]  &{Credentions}
+    [Arguments]  &{credentions}
     Open And Load Application
     Skip Settings
-    Log Into Account With Invalid Data  &{Credentions}
-    Verify Error Message, When User Log Into Account With Invalid Data  &{Credentions}
+    Log Into Account With Invalid Data  &{credentions}
+    Verify Error Message, When User Log Into Account With Invalid Data  &{credentions}
     AppiumLibrary.Close Application
 Log Into Account With Invalid Data
-    [Arguments]  &{Credentions}
+    [Arguments]  &{credentions}
     AppiumLibrary.Wait Until Page Contains Element  accessibility_id=Settings
     AppiumLibrary.Click Element   accessibility_id=Settings
     AppiumLibrary.Wait Until Page Contains Element  accessibility_id=Log in
     AppiumLibrary.Click Element  accessibility_id=Log in
     AppiumLibrary.Wait Until Page Contains Element  accessibility_id=enter username
     AppiumLibrary.Click Element   accessibility_id=enter username
-    AppiumLibrary.Input Text  accessibility_id= enter username   ${Credentions}[UserName]
+    AppiumLibrary.Input Text  accessibility_id= enter username   ${credentions}[UserName]
     AppiumLibrary.Wait Until Page Contains Element  accessibility_id=enter password
     AppiumLibrary.Click Element  accessibility_id=enter password
-    AppiumLibrary.Input Text  accessibility_id=enter password   ${Credentions}[UserPassword]
+    AppiumLibrary.Input Text  accessibility_id=enter password   ${credentions}[UserPassword]
     AppiumLibrary.Wait Until Page Contains Element  xpath=//XCUIElementTypeButton[@name="Log in"]
     AppiumLibrary.Click Element  xpath=//XCUIElementTypeButton[@name="Log in"]
 Verify Error Message, When User Log Into Account With Invalid Data
-    [Arguments]  &{Credentions}
-    Wait Until Page Contains  ${Credentions}[ErrorMessage]
+    [Arguments]  &{credentions}
+    Wait Until Page Contains  ${credentions}[ErrorMessage]
 Forgot Password
     AppiumLibrary.Wait Until Page Contains Element  accessibility_id=Settings
     AppiumLibrary.Click Element   accessibility_id=Settings
@@ -108,7 +108,7 @@ Forgot Password
     AppiumLibrary.Click Element  accessibility_id=Forgot your password?
     AppiumLibrary.Wait Until Page Contains Element  accessibility_id=enter username
     AppiumLibrary.Click Element  accessibility_id=enter username
-    AppiumLibrary.Input Text  accessibility_id=enter username  ${NAME}
+    AppiumLibrary.Input Text  accessibility_id=enter username  ${name}
     AppiumLibrary.Wait Until Page Contains Element  accessibility_id=Reset
     AppiumLibrary.Click Element  accessibility_id=Reset
 Clear Data cached data
@@ -124,12 +124,23 @@ Open The Article
 Change Front Size
     AppiumLibrary.Wait Until Page Contains Element  accessibility_id=font size
     AppiumLibrary.Click Element   accessibility_id=font size
-    ${Size1}  Get Element Size   accessibility_id=Paris Hilton
+    ${size1}  Get Element Size   accessibility_id=Paris Hilton
     AppiumLibrary.Tap    xpath=(//XCUIElementTypeOther[@name="Text size slider"])[2]/XCUIElementTypeOther  50  20
-    ${Size2}  Get Element Size   accessibility_id=Paris Hilton
-    Should Not Be Equal  ${Size1}  ${Size2}
+    ${size2}  Get Element Size   accessibility_id=Paris Hilton
+    Should Not Be Equal  ${size1}  ${size2}
 Change Language
-    
+    [Documentation]   ENG to RUS
+    AppiumLibrary.Wait Until Page Contains Element  accessibility_id=Change language
+    AppiumLibrary.Click Element   accessibility_id=Change language
+    AppiumLibrary.Wait Until Page Contains Element  accessibility_id=Русский
+    AppiumLibrary.Click Element   accessibility_id=Русский
+    AppiumLibrary.Set Appium Timeout  10
+    Page Should Contain Element  accessibility_id=Хилтон, Пэрис
+
+
+
+
+
 
 
 
