@@ -87,8 +87,6 @@ User verify the location
     Skip Settings
     Search The Location
     AppiumLibrary.Close Application
-User close application
-    Close All Applications
 
 
 
