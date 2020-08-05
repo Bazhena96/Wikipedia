@@ -157,40 +157,6 @@ Search The Location
     AppiumLibrary.Click Element   accessibility_id=Search Places
     AppiumLibrary.Input Text   accessibility_id=Search Places  ${location}
     AppiumLibrary.Tap  Search
-User Close Application
-    Close All Applications
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
