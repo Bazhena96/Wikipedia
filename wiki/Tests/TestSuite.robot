@@ -87,31 +87,3 @@ User verify the location
     Skip Settings
     Search The Location
     AppiumLibrary.Close Application
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

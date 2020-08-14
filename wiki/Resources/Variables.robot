@@ -9,4 +9,6 @@ ${password}  change13
 ${errorMessageInvalidCapture}  invalid CAPTURE
 ${nameForCreation}  testname89090023
 ${location}  Minsk,Belarus
-&{secondEmail}  admin@gmail.com
+${secondPassword}  34789job
+
+
