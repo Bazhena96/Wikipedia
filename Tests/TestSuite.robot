@@ -37,12 +37,12 @@ User change the reading preferences
     Skip Settings
     Reading Preferences
     Close Application
-User log into account and see a correct error message
+User log in to account and see a correct error message
     [Tags]   Negativ
     [Template]  Log Into Account And See A Correct Error Message
-    &{Correct userName incorrect password}
-    &{Incorrect username correct password}
-    &{Incorrect password incorrect username}
+    &{Correct username but incorrect password}
+    &{Incorrect username but correct password}
+    &{Incorrect password and incorrect username}
 User create account and see a correct error message
     [Documentation]  User create account with invalid capture
     [Tags]  Negativ
