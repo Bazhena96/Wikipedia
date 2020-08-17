@@ -53,10 +53,10 @@ Create Account
     Wait And Click  accessibility_id=enter email
     Input Text  accessibility_id=enter email  ${email}
     Wait And Click   accessibility_id=CAPTCHA text
-    AppiumLibrary.Input Text  accessibility_id=CAPTCHA text    ROW
+    Input Text  accessibility_id=CAPTCHA text    ROW
     Wait And Click  accessibility_id=Create your account
 Verify Error Message, When User Created Account With Invalid Capture
-    AppiumLibrary.Wait Until Page Countains  ${error message invalid capture}
+    Wait Until Page Countains   ${Error message with invalid capture}
 Log Into Account And See A Correct Error Message
     [Arguments]  &{credentials}
     Open And Load Application
@@ -75,7 +75,7 @@ Log Into Account With Invalid Data
     Wait And Click  xpath=//XCUIElementTypeButton[@name="Log in"]
 Verify Error Message, When User Log Into Account With Invalid Data
     [Arguments]  &{credentials}
-    AppiumLibrary.Wait Until Page Contains  ${credentials}[ErrorMessage]
+    Wait Until Page Contains   ${credentials}[ErrorMessage]
 Forgot Password
     [Arguments]  ${name}
     Wait And Click  accessibility_id=Settings
