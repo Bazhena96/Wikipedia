@@ -56,7 +56,7 @@ Create Account
     AppiumLibrary.Input Text  accessibility_id=CAPTCHA text    ROW
     Wait And Click  accessibility_id=Create your account
 Verify Error Message, When User Created Account With Invalid Capture
-    Wait Until Page Countains  ${errorMessageInvalidCapture}
+    Wait Until Page Countains  ${error message invalid capture}
 Log Into Account And See A Correct Error Message
     [Arguments]  &{credentials}
     Open And Load Application
