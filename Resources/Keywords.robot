@@ -1,15 +1,15 @@
 *** Settings ***
-Library   AppiumLibrary
+Library  AppiumLibrary
 Resource  ../Resources/Variables.robot
 *** Keywords ***
 Open And Load Application
     Open Application   http://localhost:4723/wd/hub    alias=myApp    platformName=iOS	    platformVersion=13.6    deviceName=iPhone 8     app=/Users/bazhenakashchuk/Desktop/Wikipedia.app
 Skip Settings
-    Wait Until Page Contains Element  accessibility_id=Skip
-    Click Element    accessibility_id=Skip
+     Wait Until Page Contains Element  accessibility_id=Skip
+     Click Element    accessibility_id=Skip
 Wait And Click
     [Arguments]  ${locator}
-    Wait Until Page Contains Elemment  ${locator}
+    Wait Until Page Contains Element  ${locator}
     Click Element  ${locator}
 Search The Article
     [Arguments]  ${article}
@@ -56,7 +56,7 @@ Create Account
     AppiumLibrary.Input Text  accessibility_id=CAPTCHA text    ROW
     Wait And Click  accessibility_id=Create your account
 Verify Error Message, When User Created Account With Invalid Capture
-    Wait Until Page Countains  ${error message invalid capture}
+    AppiumLibrary.Wait Until Page Countains  ${error message invalid capture}
 Log Into Account And See A Correct Error Message
     [Arguments]  &{credentials}
     Open And Load Application
@@ -75,7 +75,7 @@ Log Into Account With Invalid Data
     Wait And Click  xpath=//XCUIElementTypeButton[@name="Log in"]
 Verify Error Message, When User Log Into Account With Invalid Data
     [Arguments]  &{credentials}
-    Wait Until Page Contains  ${credentials}[ErrorMessage]
+    AppiumLibrary.Wait Until Page Contains  ${credentials}[ErrorMessage]
 Forgot Password
     [Arguments]  ${name}
     Wait And Click  accessibility_id=Settings
