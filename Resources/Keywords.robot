@@ -110,6 +110,7 @@ Save Article
     Wait And Click  accessibility_id=Back
     Wait And Click  accessibility_id=Cancel
     Wait And Click  accessibility_id=Saved
+    Wait And Click  accessibility_id=Close
     Wait Until Page Contains   Paris Hilton
 Search The Location
     [Arguments]  ${location}
