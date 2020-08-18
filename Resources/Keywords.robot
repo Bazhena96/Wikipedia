@@ -7,7 +7,7 @@ Open And Load Application
 Skip Settings
      Wait Until Page Contains Element  accessibility_id=Skip
      Click Element    accessibility_id=Skip
-Load Appliation And Skip Settings
+Load Appliacation And Skip Settings
     Open And Load Application
     Skip Settings
 Wait And Click
