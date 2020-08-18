@@ -7,6 +7,9 @@ Open And Load Application
 Skip Settings
      Wait Until Page Contains Element  accessibility_id=Skip
      Click Element    accessibility_id=Skip
+Load Appliation And Skip Settings
+    Open And Load Application
+    Skip Settings
 Wait And Click
     [Arguments]  ${locator}
     Wait Until Page Contains Element  ${locator}
@@ -56,7 +59,7 @@ Create Account
     Input Text  accessibility_id=CAPTCHA text    ROW
     Wait And Click  accessibility_id=Create your account
 Verify Error Message, When User Created Account With Invalid Capture
-    Wait Until Page Contains  ${Error message with invalid capture}
+    Wait Until Page Contains  invalid CAPTURE
 Log Into Account And See A Correct Error Message
     [Arguments]  &{credentials}
     Open And Load Application
