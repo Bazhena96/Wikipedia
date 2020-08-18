@@ -56,7 +56,7 @@ Create Account
     Input Text  accessibility_id=CAPTCHA text    ROW
     Wait And Click  accessibility_id=Create your account
 Verify Error Message, When User Created Account With Invalid Capture
-    Wait Until Page Countains   ${Error message with invalid capture}
+    Wait Until Page Contains  ${Error message with invalid capture}
 Log Into Account And See A Correct Error Message
     [Arguments]  &{credentials}
     Open And Load Application
