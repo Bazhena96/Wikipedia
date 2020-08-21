@@ -12,8 +12,7 @@ User search the article
     Close Application
 User change settings of the article
     Load Appliacation And Skip Settings
-    Change Settings
-    Close Application
+    Change Settings Close Application
 User change language settings
     Load Appliacation And Skip Settings
     Language Settings
@@ -32,7 +31,7 @@ User change the reading preferences
     Reading Preferences
     Close Application
 User log in to account and see a correct error message
-    [Tags]   Negativ
+    [Tags]  Negativ
     [Template]  Log Into Account And See A Correct Error Message
     &{Correct username but incorrect password}
     &{Incorrect username but correct password}
