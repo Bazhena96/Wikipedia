@@ -5,8 +5,8 @@ Resource  ../Resources/Variables.robot
 Open And Load Application
     Open Application   http://localhost:4723/wd/hub    alias=myApp    platformName=iOS	    platformVersion=13.6    deviceName=iPhone 8     app=/Users/bazhenakashchuk/Desktop/Wikipedia.app
 Skip Settings
-     Wait Until Page Contains Element  accessibility_id=Skip
-     Click Element    accessibility_id=Skip
+    Wait Until Page Contains Element  accessibility_id=Skip
+    Click Element  accessibility_id=Skip
 Load Appliacation And Skip Settings
     Open And Load Application
     Skip Settings
@@ -17,7 +17,7 @@ Wait And Click
 Search The Article
     [Arguments]  ${article}
     Wait And Click  accessibility_id=Search Wikipedia
-    Input Text   accessibility_id=Search Wikipedia  ${article}
+    Input Text  accessibility_id=Search Wikipedia  ${article}
     Tap  Search
 Change Settings
     Wait And Click  xpath=(//XCUIElementTypeButton[@name="overflow"])[1]
@@ -30,9 +30,9 @@ Log In
     Wait And Click  accessibility_id=Settings
     Wait And Click  accessibility_id=Log in
     Wait And Click  accessibility_id=enter username
-    Input Text  accessibility_id= enter username   ${name}
+    Input Text  accessibility_id= enter username  ${name}
     Wait And Click  accessibility_id=enter password
-    Input Text  accessibility_id=enter password   ${password}
+    Input Text  accessibility_id=enter password  ${password}
     Wait And Click  xpath=//XCUIElementTypeButton[@name="Log in"]
 Log Out
     Wait And Click  accessibility_id=Settings
@@ -72,13 +72,13 @@ Log Into Account With Invalid Data
     Wait And Click  accessibility_id=Settings
     Wait And Click  accessibility_id=Log in
     Wait And Click  accessibility_id=enter username
-    Input Text  accessibility_id= enter username   ${credentials}[UserName]
+    Input Text  accessibility_id= enter username  ${credentials}[UserName]
     Wait And Click  accessibility_id=enter password
-    Input Text  accessibility_id=enter password   ${credentials}[UserPassword]
+    Input Text  accessibility_id=enter password  ${credentials}[UserPassword]
     Wait And Click  xpath=//XCUIElementTypeButton[@name="Log in"]
 Verify Error Message, When User Log Into Account With Invalid Data
     [Arguments]  &{credentials}
-    Wait Until Page Contains   ${credentials}[ErrorMessage]
+    Wait Until Page Contains  ${credentials}[ErrorMessage]
 Forgot Password
     [Arguments]  ${name}
     Wait And Click  accessibility_id=Settings
@@ -96,11 +96,11 @@ Open The Article
 Change Front Size
     Wait And Click  accessibility_id=font size
     ${size1}  Get Element Size   accessibility_id=Paris Hilton
-    Tap    xpath=(//XCUIElementTypeOther[@name="Text size slider"])[2]/XCUIElementTypeOther  50  20
+    Tap  xpath=(//XCUIElementTypeOther[@name="Text size slider"])[2]/XCUIElementTypeOther  50  20
     ${size2}  Get Element Size   accessibility_id=Paris Hilton
     Should Not Be Equal  ${size1}  ${size2}
 Change Language
-    [Documentation]   ENG to RUS
+    [Documentation]  ENG to RUS
     Wait And Click  accessibility_id=Change language
     Wait And Click  accessibility_id=Русский
     Set Appium Timeout  10
@@ -118,7 +118,7 @@ Search The Location
     Wait And Click  accessibility_id=Enable location
     Wait And Click  accessibility_id=Allow While Using App
     Wait And Click  accessibility_id=Search Places
-    Input Text   accessibility_id=Search Places  ${location}
+    Input Text  accessibility_id=Search Places  ${location}
     Tap  Search
 
 
