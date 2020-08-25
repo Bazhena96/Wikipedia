@@ -33,9 +33,9 @@ User change the reading preferences
 User log in to account and see a correct error message
     [Tags]  Negativ
     [Template]  Log Into Account And See A Correct Error Message
-    &{Correct username but incorrect password}
-    &{Incorrect username but correct password}
-    &{Incorrect password and incorrect username}
+    &{CORRECT USERNAME BUT INCORRECT PASSWORD}
+    &{INCORRECT USERNAME BUT CORRECT PASSWORD}
+    &{INCORRECT USERNAME AND PASSWORD}
 User create account and see a correct error message
     [Documentation]  User create account with invalid capture
     [Tags]  Negativ
